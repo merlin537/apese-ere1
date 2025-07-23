@@ -1,0 +1,294 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* NAVIGATION BAR */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ffdd57;
+}
+
+/* DROPDOWN */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  color: #333;
+  top: 32px;
+  left: 0;
+  padding: 10px 0;
+  list-style: none;
+  min-width: 160px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  z-index: 1000;
+}
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-menu li a:hover {
+  background-color: #f4f4f4;
+}
+
+/* JOB HEADER SECTION */
+.job-header {
+  display: flex;
+  flex-direction: column;
+  background: url('banner.jpg') center/cover no-repeat;
+  padding: 60px 20px;
+  color: rgb(63, 36, 131);
+  gap: 2rem;
+  text-align: center;
+}
+.job-info {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.job-info h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.job-type {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.availability {
+  color: #00ff90;
+  font-weight: 600;
+}
+.deadline {
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+/* JOB FORM */
+.job-form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.job-form input,
+.job-form textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.job-form button {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.job-form button:hover {
+  background: #0056b3;
+}
+
+/* JOB LISTINGS SECTION */
+.job-listings {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px;
+  gap: 40px;
+  background: #fff;
+}
+.recent-jobs,
+.featured-job {
+  width: 100%;
+}
+.recent-jobs ul {
+  list-style: none;
+  padding: 0;
+}
+.recent-jobs li {
+  background: #f7fafd;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-left: 4px solid #007bff;
+  border-radius: 5px;
+}
+.recent-jobs .job-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.recent-jobs .badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  width: fit-content;
+}
+.badge.full-time { background: #28a745; }
+.badge.freelance { background: #17a2b8; }
+.badge.part-time { background: #ffc107; }
+.badge.temporary { background: #dc3545; }
+.show-more {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.featured-job img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.featured-info {
+  background: #f0f8ff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE: MOBILE FIRST */
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .job-header {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  .job-form {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .job-listings {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  .recent-jobs li {
+    padding: 12px;
+  }
+
+  .featured-job img {
+    max-height: 140px;
+  }
+
+  .featured-info p {
+    font-size: 0.95rem;
+  }
+
+  .job-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .job-type,
+  .availability,
+  .deadline {
+    font-size: 0.9rem;
+  }
+}
+
+/* RESPONSIVE TABLET & UP */
+@media (min-width: 768px) {
+  .job-header {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .job-listings {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .recent-jobs,
+  .featured-job {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .donation-type {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
